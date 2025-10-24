@@ -1,5 +1,17 @@
 # My Rich Note Taker - Chrome Extension
 
+[![GitHub stars](https://img.shields.io/github/stars/Insaner1980/Extension?style=social)](https://github.com/Insaner1980/Extension)
+[![GitHub forks](https://img.shields.io/github/forks/Insaner1980/Extension?style=social)](https://github.com/Insaner1980/Extension/fork)
+[![GitHub issues](https://img.shields.io/github/issues/Insaner1980/Extension)](https://github.com/Insaner1980/Extension/issues)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Chrome](https://img.shields.io/badge/Chrome-Extension-4285F4?logo=googlechrome&logoColor=white)](https://github.com/Insaner1980/Extension)
+
+> 🔗 **[View on GitHub](https://github.com/Insaner1980/Extension)** | ⭐ **[Star this project](https://github.com/Insaner1980/Extension/stargazers)**
+
 A modern, feature-rich note-taking Chrome extension built with React, TypeScript, and Material Design icons.
 
 ## Features
@@ -40,7 +52,7 @@ A modern, feature-rich note-taking Chrome extension built with React, TypeScript
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Insaner1980/Extension.git
    cd Extension
    ```
 
@@ -62,7 +74,7 @@ A modern, feature-rich note-taking Chrome extension built with React, TypeScript
 
 ### For Users
 
-1. Download the latest release
+1. Download the latest release from [Releases](https://github.com/Insaner1980/Extension/releases)
 2. Extract the ZIP file
 3. Follow step 4 above to load in Chrome
 
@@ -194,8 +206,10 @@ MIT License - feel free to use this project for personal or commercial purposes.
 
 ## Support
 
-For issues or questions, please open an issue on GitHub.
+For issues or questions, please [open an issue on GitHub](https://github.com/Insaner1980/Extension/issues).
 
 ---
 
 **Made with Claude Code** 🤖
+
+⭐ **If you find this project helpful, please give it a star!** ⭐
