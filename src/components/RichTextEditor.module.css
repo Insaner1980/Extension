@@ -1,0 +1,158 @@
+.richTextEditor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.editorContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  outline: none;
+}
+
+/* TipTap editor styles */
+.editorContent :global(.ProseMirror) {
+  outline: none;
+  min-height: 100%;
+}
+
+.editorContent :global(.ProseMirror p.is-editor-empty:first-child::before) {
+  content: attr(data-placeholder);
+  float: left;
+  color: var(--text-tertiary);
+  pointer-events: none;
+  height: 0;
+}
+
+/* Heading styles */
+.editorContent :global(h1) {
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.editorContent :global(h2) {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.editorContent :global(h3) {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.editorContent :global(h4) {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+/* Paragraph */
+.editorContent :global(p) {
+  margin-bottom: 12px;
+}
+
+/* Lists */
+.editorContent :global(ul),
+.editorContent :global(ol) {
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+
+.editorContent :global(li) {
+  margin-bottom: 6px;
+}
+
+.editorContent :global(ul) {
+  list-style-type: disc;
+}
+
+.editorContent :global(ol) {
+  list-style-type: decimal;
+}
+
+/* Blockquote */
+.editorContent :global(blockquote) {
+  border-left: 3px solid var(--accent-primary);
+  padding-left: 16px;
+  margin: 16px 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Code */
+.editorContent :global(code) {
+  background-color: var(--bg-tertiary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: var(--accent-primary);
+}
+
+.editorContent :global(pre) {
+  background-color: var(--bg-tertiary);
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 12px 0;
+}
+
+.editorContent :global(pre code) {
+  background: none;
+  padding: 0;
+  color: var(--text-primary);
+}
+
+/* Links */
+.editorContent :global(a) {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.editorContent :global(a:hover) {
+  color: var(--accent-secondary);
+}
+
+/* Bold & Italic */
+.editorContent :global(strong) {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.editorContent :global(em) {
+  font-style: italic;
+}
+
+/* Horizontal rule */
+.editorContent :global(hr) {
+  border: none;
+  border-top: 2px solid var(--border-color);
+  margin: 24px 0;
+}
+
+/* Selection */
+.editorContent :global(.ProseMirror) :global(::selection) {
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
+}

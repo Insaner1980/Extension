@@ -1,0 +1,239 @@
+.settings {
+  padding: 16px;
+  background-color: var(--bg-primary);
+  border-radius: 8px;
+  margin: 12px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+
+.loginSection {
+  padding: 16px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+}
+
+.syncSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.statusBox {
+  padding: 16px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+}
+
+.statusItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.statusIcon {
+  color: var(--success);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.statusText {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.backupInfo {
+  padding-top: 12px;
+  border-top: 1px solid var(--border-primary);
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 13px;
+}
+
+.infoLabel {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.infoValue {
+  color: var(--text-primary);
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.primaryButton,
+.secondaryButton,
+.dangerButton {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.primaryButton {
+  background-color: var(--accent-primary);
+  color: #ffffff;
+}
+
+.primaryButton:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+.secondaryButton {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+}
+
+.secondaryButton:hover:not(:disabled) {
+  background-color: var(--bg-hover);
+  border-color: var(--accent-primary);
+}
+
+.dangerButton {
+  background-color: var(--bg-primary);
+  color: var(--error);
+  border: 1px solid var(--border-primary);
+}
+
+.dangerButton:hover:not(:disabled) {
+  background-color: #fef2f2;
+  border-color: var(--error);
+}
+
+:root[data-theme="dark"] .dangerButton:hover:not(:disabled) {
+  background-color: #450a0a;
+}
+
+:root[data-theme="sepia"] .dangerButton:hover:not(:disabled) {
+  background-color: #fef3e7;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled,
+.dangerButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.alert {
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert[data-type="error"] {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+}
+
+.alert[data-type="success"] {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #16a34a;
+}
+
+:root[data-theme="dark"] .alert[data-type="error"] {
+  background-color: #450a0a;
+  border-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+:root[data-theme="dark"] .alert[data-type="success"] {
+  background-color: #052e16;
+  border-color: #14532d;
+  color: #86efac;
+}
+
+:root[data-theme="sepia"] .alert[data-type="error"] {
+  background-color: #fef3e7;
+  border-color: #f4d9b8;
+  color: #c4594d;
+}
+
+:root[data-theme="sepia"] .alert[data-type="success"] {
+  background-color: #f0f4e8;
+  border-color: #d4e4c8;
+  color: #6d8f5d;
+}
+
+.alertIcon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.alertText {
+  flex: 1;
+  line-height: 1.4;
+}

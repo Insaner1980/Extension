@@ -1,0 +1,159 @@
+.audioRecorder {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.recordButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.recordButton:hover:not(:disabled) {
+  background-color: var(--accent-light);
+  border-color: var(--accent-primary);
+  transform: scale(1.05);
+}
+
+.recordButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.recordButton.recording {
+  background-color: #ef4444;
+  border-color: #dc2626;
+  animation: recordPulse 1.5s ease-in-out infinite;
+}
+
+.recordButton.recording:hover {
+  background-color: #dc2626;
+}
+
+@keyframes recordPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+}
+
+.micIcon,
+.stopIcon,
+.spinner {
+  display: inline-block;
+}
+
+.stopIcon {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.recordingIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+}
+
+:root[data-theme="dark"] .recordingIndicator {
+  background-color: #450a0a;
+  border-color: #7f1d1d;
+}
+
+:root[data-theme="sepia"] .recordingIndicator {
+  background-color: #fef3e7;
+  border-color: #f4d9b8;
+}
+
+.pulse {
+  color: #ef4444;
+  font-size: 12px;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.recordingText {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--error);
+}
+
+.liveTranscription {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 400px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.transcriptionLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.transcriptionText {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.error {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #dc2626;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+:root[data-theme="dark"] .error {
+  background-color: #450a0a;
+  border-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+:root[data-theme="sepia"] .error {
+  background-color: #fef3e7;
+  border-color: #f4d9b8;
+  color: #c4594d;
+}
